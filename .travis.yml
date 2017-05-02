@@ -10,7 +10,7 @@ cache:
   directories:
   - $HOME/.m2
 before_cache:
-- rm -rf $HOME/.m2/repository/com/vaadin/vaadin-frontend-maven-plugin
+- rm -rf $HOME/.m2/repository/org/vaadin/webcomponentshelper
 env:
   global:
   - secure: EGBPZREMeQ2LedEF3MnMSd56nVHadPkFrAl1Z3vrDd8inc6LAaDyeXWoh8ngnJG1iuWeX0Zcd1qG2em5/4X6ahiRwmaEb5cNjb762jV+mvmyt/UXV2Ru+7YgNG9qZ0YU0NYfDD0d8FkJWzJQy6NGj2y1OQtVeuRl0UKmi0XVCRJvZrmkRTl3JnzsOMkIGQNeHs0JMJ1HkmzgOYu0DkwO5+s+htw9rKWuwpGGkRwmpicK8Igyu62aCMGSKvaeWYtRLza6hmHW4NkRVALUoe6e2IGQbcmHzv3/unIa2383REtS6tFtAGzMJnwgv+57IGBXSvb/zLljDgIC9tAFd7ceo7J2B8XHcpN0NpEveiL5iQh7UUjBUX2GpKOuRlTk/1kwIs3clLKH5X8AuzxVq2XI6R+LrdbYvRJ5BKYsoo5iXPjPMU0oX/3qoQyG85eF171Vlwu2U3uWv5nYKMBOf8aMCypBG2UqsvZzbosis5AUeGQouK2HkU7GC9SpdpuD8lu2MIWUcIKlFPFIB5FT2K919lZ2vzjvhQ3v6H7wQNqwEqwRJHSDRBFjyAeqmEKtPaFNl4KEYmf7gHSnt4nP14vGI/gkymNJpyFB6kBx+XNgY5O2ef+f/sbCr2Wm8tnnyZutbRWddveqbzQadZJWvZiLluleyeiGTBSd8FxJ5BmMTmo=
