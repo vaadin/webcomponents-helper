@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.vaadin.webcomponentshelper.htmlbundle;
+package com.vaadin.webcomponentshelper.htmlbundle;
 
 import java.io.IOException;
 import java.net.URL;
