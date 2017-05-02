@@ -52,6 +52,6 @@ public enum WebComponentsPolyfillMode {
      *         otherwise
      */
     private static boolean isBowerJsonOnClasspath(ClassLoader classLoader) {
-        return classLoader.getResource("/bower.json") != null;
+        return classLoader.getResource("bower.json") != null;
     }
 }
