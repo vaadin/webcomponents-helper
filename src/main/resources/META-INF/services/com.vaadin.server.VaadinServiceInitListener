@@ -1,1 +1,2 @@
 com.vaadin.webcomponentshelper.polyfill.LoadPolyfill
+com.vaadin.webcomponentshelper.htmlbundle.HtmlBundleHandler
