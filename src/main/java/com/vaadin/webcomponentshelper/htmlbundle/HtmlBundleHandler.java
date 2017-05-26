@@ -25,7 +25,9 @@ import java.util.logging.Logger;
 import com.vaadin.server.BootstrapHandler;
 import com.vaadin.server.DependencyFilter;
 import com.vaadin.server.DeploymentConfiguration;
+import com.vaadin.server.ServiceInitEvent;
 import com.vaadin.server.VaadinService;
+import com.vaadin.server.VaadinServiceInitListener;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.server.VaadinServletService;
 import com.vaadin.server.VaadinSession;
@@ -36,13 +38,19 @@ import com.vaadin.ui.Dependency.Type;
  * Takes care of rewriting HTML resources into a HTML bundle, if such a bundle
  * is used.
  */
-public class HtmlBundleHandler implements DependencyFilter {
+public class HtmlBundleHandler
+        implements DependencyFilter, VaadinServiceInitListener {
 
     /**
      * Configuration name for the HTML bundle to use instead of individual HTML
      * imports.
      */
     public static final String HTML_BUNDLE_NAME = "html-bundle";
+
+    @Override
+    public void serviceInit(ServiceInitEvent event) {
+        event.addDependencyFilter(this);
+    }
 
     /**
      * Processes the given dependencies and replaces any suitable HTML import

@@ -5,7 +5,7 @@
 	<groupId>com.vaadin</groupId>
 	<artifactId>webcomponents-helper</artifactId>
 	<packaging>jar</packaging>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.2-SNAPSHOT</version>
 	<name>Helper for using Web Components with Framework 8.1</name>
 
 	<properties>
