@@ -15,7 +15,6 @@
  */
 package com.vaadin.webcomponentshelper.polyfill;
 
-import java.util.Collections;
 import java.util.logging.Logger;
 
 import org.jsoup.nodes.Element;
@@ -55,8 +54,15 @@ public class LoadPolyfill implements VaadinServiceInitListener {
                         Element script = new Element(Tag.valueOf("script"), "")
                                 .attr("type", "text/javascript")
                                 .attr("src", webcomponentsJS);
-                        response.getDocument().head().insertChildren(0,
-                                Collections.singletonList(script));
+                        Element head = response.getDocument().head();
+                        head.prependChild(script);
+
+                        Element uaCompatible = head
+                                .getElementsByAttributeValue("http-equiv", "X-UA-Compatible").first();
+                        if (uaCompatible != null) {
+                            uaCompatible.remove();
+                            script.before(uaCompatible);
+                        }
                     }
                 }
 
