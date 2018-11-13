@@ -9,7 +9,7 @@
 	</parent>
     <artifactId>webcomponents-helper</artifactId>
     <packaging>jar</packaging>
-    <version>0.2-SNAPSHOT</version>
+    <version>0.2.1</version>
     <name>Helper for using Web Components with Framework 8.1+</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
