@@ -6,8 +6,7 @@
     <artifactId>webcomponents-helper</artifactId>
     <packaging>jar</packaging>
     <version>0.2-SNAPSHOT</version>
-    <name>Helper for using Web Components with Framework 8.1</name>
-
+    <name>Helper for using Web Components with Framework 8.1+</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <vaadin.version>8.1-SNAPSHOT</vaadin.version>
@@ -26,6 +25,24 @@
         <name>Vaadin Ltd</name>
         <url>https://vaadin.com/</url>
     </organization>
+    <url>https://vaadin.com/</url>
+    <description>Helper for using Web Components with Framework 8.1+</description>
+    <scm>
+        <connection>scm:git:git://github.com/vaadin/webcomponents-helper.git</connection>
+        <developerConnection>scm:git:git://github.com/vaadin/webcomponents-helper.git</developerConnection>
+        <url>https://github.com/vaadin/webcomponents-helper</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>asignell</id>
+            <name>Artur Signell</name>
+            <email>artur@vaadin.com</email>
+            <organization>Vaadin</organization>
+            <organizationUrl>http://vaadin.com</organizationUrl>
+            <timezone>+2</timezone>
+        </developer>
+    </developers>
 
     <repositories>
         <repository>
@@ -121,4 +138,27 @@
         </plugins>
     </build>
 
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
