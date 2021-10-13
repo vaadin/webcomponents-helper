@@ -13,7 +13,7 @@
     <name>Helper for using Web Components with Framework 8.1+</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <vaadin.version>8.6.0</vaadin.version>
+        <vaadin.version>8.14.1</vaadin.version>
         <vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
     </properties>
 
